@@ -19,8 +19,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+// необходимо писать полное название пространства имен и отчищать кэш роута после изменения
+Route::get('/country', 'App\Http\Controllers\Api\Country\CountryController@country');
 
-Route::get('country', 'Api\Country\CountryController@country');
+
+
+
 Route::get('country/{id}', 'Api\Country\CountryController@countryById');
 
 Route::post('login', 'Api\Auth\LoginController@login');
