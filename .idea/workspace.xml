@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="127b0952-41d1-4565-9a32-9d9ca032e417" name="Default Changelist" comment="" />
+    <list default="true" id="127b0952-41d1-4565-9a32-9d9ca032e417" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Country/CountryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/CountryModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <phar pharPath="C:\OpenServer\domains\composer.phar" interpreterId="eb9c0d93-8408-4189-8aac-45b0abbf855d" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -124,13 +146,19 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1pbEsxDRiClWAPFnJ3btJ0k6Lso" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -150,21 +178,53 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615443603198</updated>
-      <workItem from="1615443606834" duration="321000" />
+      <workItem from="1615443606834" duration="1631000" />
+      <workItem from="1615447712644" duration="4075000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="2660" y="264" key="FileChooserDialogImpl" timestamp="1615443700087">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2660" y="264" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615443700087" />
+    <state x="2737" y="421" width="555" height="207" key="Github.ShareDialog" timestamp="1615444078141">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2737" y="421" width="555" height="207" key="Github.ShareDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615444078141" />
+    <state x="2548" y="225" key="Github.UntrackedFilesDialog" timestamp="1615444102073">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2548" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615444102073" />
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1615447632584">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615447632584" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1615447632584">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615447632584" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1615447632584">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615447632584" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1615447632584">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615447632584" />
     <state x="2381" y="168" key="SettingsEditor" timestamp="1615443728852">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2381" y="168" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615443728852" />
+    <state x="2536" y="243" key="run.anything.popup" timestamp="1615452225766">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2536" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615452225766" />
   </component>
 </project>
