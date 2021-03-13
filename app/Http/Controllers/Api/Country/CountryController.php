@@ -71,9 +71,9 @@ class CountryController extends Controller {
 
 
 
-
+    // редактирование записи в таблице. можно редактировать только одно поле
     public function countryEdit(Request $req, $id) {
-        $rules = [
+       /* $rules = [
             'iso' => 'required|min:2|max:2',
             'name' => 'required|min:3',
             'name_en' => 'required|min:3'
@@ -81,11 +81,11 @@ class CountryController extends Controller {
         $validator = Validator::make($req->all(), $rules);
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400);
-        }
+        }*/
         $country = CountryModel::find($id);
-        if ( is_null($country) ) {
+        /*if ( is_null($country) ) {
             return response()->json(['error' => true, 'message' => 'Not found'], 404);
-        }
+        }*/
         $country->update($req->all());
         return response()->json($country, 200);
     }

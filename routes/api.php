@@ -35,6 +35,12 @@ Route::post('country', 'App\Http\Controllers\Api\Country\CountryController@count
 Route::post('countryfoc', 'App\Http\Controllers\Api\Country\CountryController@countrySaveFOC');
 
 
+// редактирование записи в таблице. можно редактировать только одно поле
+Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
+
+
+
+
 
 Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
 
@@ -43,7 +49,6 @@ Route::group(['middleware' => ['jwt.verify']], function () {
 
 
 
-    Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
     Route::delete('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryDelete');
     Route::get('refresh', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
 });
