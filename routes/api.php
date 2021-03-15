@@ -39,7 +39,8 @@ Route::post('countryfoc', 'App\Http\Controllers\Api\Country\CountryController@co
 Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
 
 
-
+// удаление строки из таблицы
+Route::delete('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryDelete');
 
 
 Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
@@ -49,6 +50,5 @@ Route::group(['middleware' => ['jwt.verify']], function () {
 
 
 
-    Route::delete('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryDelete');
     Route::get('refresh', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
 });
