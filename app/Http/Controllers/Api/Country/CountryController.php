@@ -21,6 +21,13 @@ class CountryController extends Controller {
         // для отладки
         //$dddd = CountryModel::get();
         //dd($dddd);
+
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         return response()->json(CountryModel::get(), 200);
 
     }
@@ -31,6 +38,13 @@ class CountryController extends Controller {
     // получение  записи из таблицы по id
     // вы можете также получить конкретные записи с помощью find()
     public function countryById($id) {
+
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         $country = CountryModel::find($id);
         if ( is_null($country) )
         {
@@ -43,6 +57,12 @@ class CountryController extends Controller {
 
     // добавление записи в таблицу
     public function countrySave(Request $req) {
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         $rules = [
             'iso' => 'required|min:2|max:2',
             'name' => 'required|min:3',
@@ -66,6 +86,12 @@ class CountryController extends Controller {
      не найдена в БД, запись будет вставлена в БД с указанными атрибутами.
     https://laravel.ru/posts/658  */
     public function countrySaveFOC(Request $req){
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         $country = CountryModel::firstOrCreate($req->all());
         return response()->json($country, 201);
     }
@@ -74,6 +100,13 @@ class CountryController extends Controller {
 
     // редактирование записи в таблице. можно редактировать только одно поле
     public function countryEdit(Request $req, $id) {
+
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         $rules = [
             'iso' => 'required|min:2|max:2',
             'name' => 'required|min:3',
@@ -97,6 +130,12 @@ class CountryController extends Controller {
 
     // удаление строки из таблицы
     public function countryDelete(Request $req, $id) {
+        // код проверки пользователя
+        try{
+            $user = auth()->userOrFail();
+        } catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return response()->json(['error' => true, 'message' => $e->getMessage()], 401);
+        }
         $country = CountryModel::find($id);
         if ( is_null($country) ) {
             return response()->json(['error' => true, 'message' => 'Not found'], 404);

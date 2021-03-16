@@ -20,35 +20,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 // необходимо писать полное название пространства имен и отчищать кэш роута после изменения
-// получение всех записей из таблицы
-Route::get('/country', 'App\Http\Controllers\Api\Country\CountryController@country');
 
 // получение  записи из таблицы по id
 Route::get('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryById');
-
-
-// добавление записи в таблицу методом create()
-Route::post('country', 'App\Http\Controllers\Api\Country\CountryController@countrySave');
-
-
+Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
 // добавление записи в таблицу методом firstOrCreate()
 Route::post('countryfoc', 'App\Http\Controllers\Api\Country\CountryController@countrySaveFOC');
 
-
-// редактирование записи в таблице. можно редактировать только одно поле
-Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
-
-
-// удаление строки из таблицы
-Route::delete('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryDelete');
-
-
-Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
-
 Route::group(['middleware' => ['jwt.verify']], function () {
-
-
-
-
+    // редактирование записи в таблице. можно редактировать только одно поле
+    Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
+    // удаление строки из таблицы
+    Route::delete('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryDelete');
+    // получение всех записей из таблицы
+    Route::get('/country', 'App\Http\Controllers\Api\Country\CountryController@country');
+    // добавление записи в таблицу методом create()
+    Route::post('country', 'App\Http\Controllers\Api\Country\CountryController@countrySave');
     Route::get('refresh', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
 });
