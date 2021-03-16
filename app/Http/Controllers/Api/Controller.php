@@ -11,6 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    // это позволит переключать драйвер в web на api
     public function __construct() {
         auth()->setDefaultDriver('api');
     }
