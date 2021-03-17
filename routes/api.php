@@ -28,7 +28,11 @@ Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
 // добавление записи в таблицу методом firstOrCreate()
 Route::post('countryfoc', 'App\Http\Controllers\Api\Country\CountryController@countrySaveFOC');
 
-Route::group(['middleware' => ['jwt.verify']], function () {
+Route::group([
+
+    'middleware' => ['jwt.verify']],
+
+    function () {
     // редактирование записи в таблице. можно редактировать только одно поле
     Route::put('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryEdit');
     // удаление строки из таблицы
@@ -52,9 +56,13 @@ Route::group([
 
 ], function ($router) {
 
+    // вход по логину. в ответ получает токен
     Route::post('login', 'App\Http\Controllers\AuthController@login');
     Route::post('logout', 'App\Http\Controllers\AuthController@logout');
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
     Route::get('user', 'App\Http\Controllers\AuthController@user');
+
+    // роут регистрации ( '/api/auth/register' )
+    Route::post('register', 'App\Http\Controllers\Auth\RegisterController@register');
 
 });

@@ -90,14 +90,14 @@ return [
     | JWT time to live
     |--------------------------------------------------------------------------
     |
-    | Specify the length of time (in minutes) that the token will be valid for.
-    | Defaults to 1 hour.
+    | Укажите время (в минутах), в течение которого токен будет действителен.
+    | По умолчанию 1 час.
     |
-    | You can also set this to null, to yield a never expiring token.
-    | Some people may want this behaviour for e.g. a mobile app.
-    | This is not particularly recommended, so make sure you have appropriate
-    | systems in place to revoke the token if necessary.
-    | Notice: If you set this to null you should remove 'exp' element from 'required_claims' list.
+    | Вы также можете установить для него значение null, чтобы получить токен с неограниченным сроком действия.
+    | Некоторым людям может понадобиться такое поведение, например, мобильное приложение.
+    | Это особенно не рекомендуется, поэтому убедитесь, что у вас есть подходящие
+    | системы для отзыва токена в случае необходимости.
+    | Примечание: если вы установите это значение null, вы должны удалить элемент «exp» из списка «required_claims».
     |
     */
 
