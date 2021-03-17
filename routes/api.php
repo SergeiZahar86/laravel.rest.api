@@ -23,6 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // получение  записи из таблицы по id
 Route::get('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryById');
+// вход по логину и паролю. Возвращается токен
 Route::post('login', 'App\Http\Controllers\Api\Auth\LoginController@login');
 // добавление записи в таблицу методом firstOrCreate()
 Route::post('countryfoc', 'App\Http\Controllers\Api\Country\CountryController@countrySaveFOC');
@@ -36,5 +37,24 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('/country', 'App\Http\Controllers\Api\Country\CountryController@country');
     // добавление записи в таблицу методом create()
     Route::post('country', 'App\Http\Controllers\Api\Country\CountryController@countrySave');
+    // обновление токена
     Route::get('refresh', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
+});
+
+
+
+
+// это из https://www.youtube.com/watch?v=c9ULPmk949I
+Route::group([
+
+    'middleware' => 'api',
+    'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', 'App\Http\Controllers\AuthController@login');
+    Route::post('logout', 'App\Http\Controllers\AuthController@logout');
+    Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
+    Route::get('user', 'App\Http\Controllers\AuthController@user');
+
 });

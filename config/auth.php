@@ -7,14 +7,14 @@ return [
     | Authentication Defaults
     |--------------------------------------------------------------------------
     |
-    | This option controls the default authentication "guard" and password
-    | reset options for your application. You may change these defaults
-    | as required, but they're a perfect start for most applications.
+    | Эта опция управляет "охраной" аутентификации по умолчанию и паролем.
+    | сбросить параметры для вашего приложения. Вы можете изменить эти настройки по умолчанию
+    | по мере необходимости, но они являются идеальным началом для большинства приложений.
     |
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -23,15 +23,15 @@ return [
     | Authentication Guards
     |--------------------------------------------------------------------------
     |
-    | Next, you may define every authentication guard for your application.
-    | Of course, a great default configuration has been defined for you
-    | here which uses session storage and the Eloquent user provider.
+    | Затем вы можете определить все средства защиты аутентификации для своего приложения.
+    | Конечно, для вас определена отличная конфигурация по умолчанию.
+    | здесь используется хранилище сеансов и пользовательский провайдер Eloquent.
     |
-    | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
-    | mechanisms used by this application to persist your user's data.
+    | Все драйверы аутентификации имеют поставщика пользователей. Это определяет, как
+    | пользователи фактически извлекаются из вашей базы данных или другого хранилища
+    | механизмы, используемые этим приложением для сохранения данных вашего пользователя.
     |
-    | Supported: "session", "token"
+    | Поддерживаются: «сеанс», «токен»
     |
     */
 
@@ -53,15 +53,15 @@ return [
     | User Providers
     |--------------------------------------------------------------------------
     |
-    | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
-    | mechanisms used by this application to persist your user's data.
+    | Все драйверы аутентификации имеют поставщика пользователей. Это определяет, как
+    | пользователи фактически извлекаются из вашей базы данных или другого хранилища
+    | механизмы, используемые этим приложением для сохранения данных вашего пользователя.
     |
-    | If you have multiple user tables or models you may configure multiple
-    | sources which represent each model / table. These sources may then
-    | be assigned to any extra authentication guards you have defined.
+    | Если у вас несколько пользовательских таблиц или моделей, вы можете настроить несколько
+    | источники, которые представляют каждую модель / таблицу. Эти источники могут затем
+    | быть назначенным любым дополнительным средствам защиты аутентификации, которые вы определили.
     |
-    | Supported: "database", "eloquent"
+    | Поддерживаются: «база данных», «красноречивый»
     |
     */
 
