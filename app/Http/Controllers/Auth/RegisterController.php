@@ -44,7 +44,7 @@ class RegisterController extends Controller
     }
 
 
-    // свой метод для регистрации
+    // свой метод для регистрации пользователя  ==================================================================================
     public function register(Request $request)
     {
         try {
@@ -65,6 +65,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+    // убрал валидацию поля name =====================================================================================
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -79,6 +81,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
+
+    // добавил отсутствие необходимости передачи поля name ================================================================
     protected function create(array $data)
     {
         return User::create([
@@ -96,6 +100,8 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+
+    // этот метод взят из AuthController.php ========================================================================
     protected function respondWithToken($token)
     {
         return response()->json([

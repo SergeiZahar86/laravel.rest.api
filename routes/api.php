@@ -28,6 +28,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // это из https://www.youtube.com/playlist?list=PLtHO7nOKfHGaWhgndBeHQFm6bYZ7ROuVe
 // https://jwt-auth.readthedocs.io/en/develop/
 // необходимо писать полное название пространства имен и отчищать кэш роута после изменения
+
 // получение  записи из таблицы по id
 Route::get('country/{id}', 'App\Http\Controllers\Api\Country\CountryController@countryById');
 // вход по логину и паролю. Возвращается токен
@@ -50,15 +51,9 @@ Route::group([
     Route::post('country', 'App\Http\Controllers\Api\Country\CountryController@countrySave');
     // обновление токена
     Route::get('refresh', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
+
+    Route::get('logout', 'App\Http\Controllers\Api\Auth\LoginController@refresh');
 });
-
-
-
-
-
-
-
-
 
 
 
